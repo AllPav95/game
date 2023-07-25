@@ -1,6 +1,6 @@
 import os
 import sapper_game
-# from sapper_game import *
+
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -28,7 +28,7 @@ def print_menu(menu_items, selected_item):
             mines = int(mines)
             sapper_game.getparams(size, mines)
 
-def main():
+def mainMenu():
     menu_items = ["5x5 (5 mines)", "10x10 (10 mines)", "15x15 (15 mines)"]
     selected_item = 0
 
@@ -44,8 +44,4 @@ def main():
              size, mines = menu_items[selected_item].split(" ")[0].split("x")
              size = int(size)
              mines = int(mines)
-
              sapper_game.getparams(size, mines)
-
-main()
-
